@@ -32,5 +32,18 @@ hr{
 }
 .no-posts{
     font-style: italic;
-    color: slategray;
+    color: gray;
+}
+.content form{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+.content label{
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+.content input{
+    margin-bottom: 1em; 
 }
