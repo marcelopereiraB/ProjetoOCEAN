@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %} pagina Inicial {% endblock %}
+{%block title %} Página Inicial {% endblock %}
 
 {% block content %}
 {% for post in posts %}
     <article class="post">
         <header>
             <div>
-                <h1> {{ post.title}}</h1>
+                <h1>{{ post.title }}</h1>
                 <div class="about">
-                   by {{ post.autor.username }}  on {{ post.created.strftime('%d/%m/%y') }}
+                    by {{ post.author.username }} on {{ post.created.strftime('%d/%m/%Y') }}
                 </div>
-            </div>
+            </div> 
         </header>
-        <p class="body"> {{post.body}}</p>
-    </articler>
+        <p class="body"> {{post.body}} </p>
+    </article>
     {% if not loop.last %}
         <hr>
     {% endif %}
 {% else %}
-    <p class="no-posts"> Ops... There are no posts to Display! </p>
+    <p class="no-posts"> Ops.. There are no posts to display! </p>
 {% endfor %}
-{% endblock %}
+{% endblock%}
