@@ -5,9 +5,10 @@ from flask_login import LoginManager, UserMixin, current_user, logout_user, logi
 from werkzeug.security import check_password_hash, generate_password_hash
 from sqlalchemy.exc import IntegrityError
 import os
+
 app = Flask("hello")
 db_url = os.environ.get("DATABASE_URL") or "sqlite:///app.db"
-app.config["SQLALCHEMY_DATABASE_URI"] = db_url.replace("postgres", "postgresql")
+app.config["SQLALCHEMY_DATABASE_URI"] =  db_url.replace("postgres", "postgresql") 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = "pudim"
 
@@ -45,7 +46,7 @@ db.create_all()
 
 @app.route("/")
 def index():
-    posts = Post.query.all()
+    posts = Post.query.order_by(-Post.created).all()
     return render_template("index.html", posts=posts)
 
 @app.route('/register', methods=["GET","POST"])
