@@ -3,7 +3,7 @@
 #FAzer login
 
 #cria app
-heroku create
+heroku create nome do app
 
 #cria Banco
 heroku addons:create heroku-postgresql:hobby-dev --app
@@ -12,4 +12,4 @@ heroku addons:create heroku-postgresql:hobby-dev --app
 heroku config --app blog-python-ocean
 
 # para atualizar
-git push heroku main
+git push heroku main 
