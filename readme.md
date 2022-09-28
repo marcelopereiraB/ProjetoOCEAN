@@ -13,3 +13,7 @@ heroku config --app blog-python-ocean
 
 # para atualizar
 git push heroku main 
+
+
+#
+Projeto da python para web com flask
