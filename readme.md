@@ -1,19 +1,3 @@
-#Para deploy no Heroku
-
-#FAzer login
-
-#cria app
-heroku create nome do app
-
-#cria Banco
-heroku addons:create heroku-postgresql:hobby-dev --app
-
-#ve config do app
-heroku config --app blog-python-ocean
-
-# para atualizar
-git push heroku main 
-
 
 #
-Projeto da python para web com flask
+Projeto da python para web com flask, com autenticação e armazenagem de dados
